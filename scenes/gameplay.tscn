@@ -120,7 +120,6 @@ y_sort_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_7biu0")]
 
 [node name="Map" type="Node2D" parent="."]
-y_sort_enabled = true
 
 [node name="Ground" type="TileMapLayer" parent="Map"]
 y_sort_enabled = true
