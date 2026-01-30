@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=12 format=4 uid="uid://db3gunc8lhlbb"]
 
+[ext_resource type="Texture2D" uid="uid://cclynjr1ohon0" path="res://asset/map/ground.png" id="1_00tan"]
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="2_l1v76"]
-[ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
+[ext_resource type="PackedScene" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1v76"]
 texture = ExtResource("2_00tan")
@@ -24,9 +25,45 @@ texture = ExtResource("2_00tan")
 3:2/0 = 0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bh5q"]
+texture = ExtResource("1_00tan")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSet" id="TileSet_ct7aa"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_l1v76")
+sources/4 = SubResource("TileSetAtlasSource_4bh5q")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ocj2s"]
 texture = ExtResource("2_00tan")
@@ -47,9 +84,10 @@ texture = ExtResource("2_00tan")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_din8e"]
 texture = ExtResource("2_l1v76")
+0:4/0 = 0
+1:4/0 = 0
 0:0/animation_columns = 4
 0:0/animation_speed = 4.0
-0:0/animation_mode = 1
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
 0:0/animation_frame_2/duration = 1.0
@@ -57,9 +95,16 @@ texture = ExtResource("2_l1v76")
 0:0/animation_frame_4/duration = 1.0
 0:0/animation_frame_5/duration = 1.0
 0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
 0:0/0 = 0
-0:4/0 = 0
-1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_din8e"]
 physics_layer_0/collision_layer = 4
@@ -76,11 +121,11 @@ y_sort_enabled = true
 
 [node name="Ground" type="TileMapLayer" parent="Map"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD8/wQAAAAAAAEAAAD9/wQAAAABAAEAAAD+/wQAAAACAAEAAAD//wQAAAABAAEAAAAAAAQAAAACAAEAAAABAAQAAAABAAEAAAACAAQAAAACAAEAAAADAAQAAAABAAEAAAAEAAQAAAABAAEAAAAFAAQAAAABAAEAAAAGAAQAAAABAAEAAAAHAAQAAAAAAAIAAAAIAAMAAAACAAIAAAAIAAQAAAABAAIAAAAIAAIAAAACAAIAAAAHAAMAAAACAAEAAAAIAAEAAAACAAEAAAAJAAEAAAADAAEAAAAJAAIAAAABAAIAAAAJAAMAAAAAAAIAAAAJAAQAAAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAD8/wQABAAAAAAAAAD9/wQABAABAAAAAAD+/wQABAABAAAAAAD//wQABAABAAAAAAAAAAQABAABAAAAAAABAAQABAABAAAAAAACAAQABAABAAAAAAADAAQABAABAAAAAAAEAAQABAABAAAAAAAFAAQABAABAAAAAAAGAAQABAABAAAAAAAHAAQABAABAAEAAAAIAAMABAABAAEAAAAIAAQABAABAAEAAAAIAAIABAAAAAEAAAAHAAMABAAAAAAAAAAIAAEABAAAAAAAAAAJAAEABAACAAAAAAAJAAIABAACAAEAAAAJAAMABAACAAEAAAAJAAQABAACAAEAAAD8/wUABAAAAAIAAAD9/wUABAABAAIAAAD+/wUABAABAAIAAAD//wUABAABAAIAAAAAAAUABAABAAIAAAABAAUABAABAAIAAAACAAUABAABAAIAAAADAAUABAABAAIAAAAEAAUABAABAAIAAAAFAAUABAABAAIAAAAGAAUABAABAAIAAAAHAAUABAABAAIAAAAIAAUABAABAAIAAAAJAAUABAABAAIAAAAKAAUABAABAAIAAAALAAUABAABAAIAAAAMAAUABAABAAIAAAANAAUABAABAAIAAAAOAAUABAABAAIAAAAPAAUABAABAAIAAAAQAAUABAABAAIAAAARAAUABAABAAIAAAASAAUABAABAAIAAAATAAUABAABAAIAAAAUAAUABAACAAIAAAAUAAQABAACAAEAAAAUAAMABAACAAEAAAAUAAIABAACAAAAAAATAAQABAABAAEAAAATAAMABAABAAEAAAATAAIABAABAAAAAAASAAIABAABAAAAAAARAAIABAABAAAAAAARAAMABAABAAEAAAARAAQABAABAAEAAAASAAQABAABAAEAAAASAAMABAABAAEAAAAPAAIABAAAAAAAAAAPAAMABAAAAAEAAAAPAAQABAAAAAEAAAAQAAIABAABAAAAAAAQAAMABAABAAEAAAAQAAQABAABAAEAAAA=")
 tile_set = SubResource("TileSet_ct7aa")
 
 [node name="Water" type="TileMapLayer" parent="Map"]
-tile_map_data = PackedByteArray("AAAKAAMAAAAAAAMAAAAKAAQAAAAAAAQAAAALAAQAAAAAAAQAAAAMAAQAAAAAAAQAAAANAAQAAAAAAAQAAAAOAAQAAAAAAAQAAAALAAMAAAAAAAMAAAAMAAMAAAAAAAMAAAANAAMAAAAAAAMAAAAOAAMAAAAAAAMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAMAAQAAAAQAAAAKAAQAAQABAAQAAAALAAQAAQABAAQAAAAMAAQAAQABAAQAAAANAAQAAQABAAQAAAAOAAQAAQABAAQAAAALAAMAAQAAAAQAAAAMAAMAAQAAAAQAAAANAAMAAQAAAAQAAAAOAAMAAQAAAAQAAAAKAAIAAQAAAAAAAAALAAIAAQAAAAAAAAAMAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_din8e")
 
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]
