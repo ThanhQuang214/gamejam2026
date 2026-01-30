@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1b255ekerdrw"]
+[gd_scene load_steps=4 format=3 uid="uid://c1b255ekerdrw"]
 
 [ext_resource type="Texture2D" uid="uid://c5r7p4uk4vkam" path="res://asset/ui/mask_ui.png" id="1_e5w0w"]
 [ext_resource type="Texture2D" uid="uid://dqa3w04g88v0s" path="res://asset/ui/mask_ui_close.png" id="2_kywrn"]
+[ext_resource type="PackedScene" uid="uid://snlj6e15d5wg" path="res://scenes/mask_ui.tscn" id="3_kywrn"]
 
 [node name="UICenter" type="CanvasLayer"]
 
@@ -15,3 +16,7 @@ texture_normal = ExtResource("1_e5w0w")
 texture_hover = ExtResource("2_kywrn")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="maskUi" parent="." instance=ExtResource("3_kywrn")]
+
+[connection signal="pressed" from="TextureButton" to="maskUi" method="_on_texture_button_pressed"]

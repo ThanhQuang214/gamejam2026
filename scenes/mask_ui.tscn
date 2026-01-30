@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://snlj6e15d5wg"]
+
+[ext_resource type="Texture2D" uid="uid://ofwc6ii5i35h" path="res://asset/ui/pick_ui.png" id="1_ewbh5"]
+[ext_resource type="Script" uid="uid://vu7mtihjno51" path="res://script/mask_ui.gd" id="1_ykyxb"]
+[ext_resource type="Texture2D" uid="uid://ccsrinp5esawp" path="res://asset/mask/water_mask.png" id="2_ykyxb"]
+[ext_resource type="Texture2D" uid="uid://5mqvouwbed0t" path="res://asset/ui/water_mask_ui.png" id="3_t35ak"]
+
+[node name="maskUi" type="Control"]
+visible = false
+layout_mode = 3
+anchor_left = 0.271701
+anchor_right = 0.810764
+anchor_bottom = 0.967593
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykyxb")
+metadata/_edit_use_anchors_ = true
+
+[node name="mask1" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_left = 0.333333
+anchor_top = 0.0861244
+anchor_right = 0.655395
+anchor_bottom = 0.373206
+offset_right = -3.05176e-05
+texture = ExtResource("1_ewbh5")
+metadata/_edit_use_anchors_ = true
+
+[node name="mask2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.331723
+anchor_top = 0.500797
+anchor_right = 0.653784
+anchor_bottom = 0.787879
+texture = ExtResource("1_ewbh5")
+metadata/_edit_use_anchors_ = true
+
+[node name="mask2But" type="TextureButton" parent="mask2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.005
+anchor_top = -0.0222222
+anchor_right = 0.995
+anchor_bottom = 0.977778
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_ykyxb")
+texture_hover = ExtResource("3_t35ak")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="mask3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0483092
+anchor_top = 0.266348
+anchor_right = 0.37037
+anchor_bottom = 0.553429
+texture = ExtResource("1_ewbh5")
+metadata/_edit_use_anchors_ = true
+
+[node name="mask4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.610306
+anchor_top = 0.283892
+anchor_right = 0.932367
+anchor_bottom = 0.570973
+offset_bottom = 3.05176e-05
+texture = ExtResource("1_ewbh5")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="mask2/mask2But" to="." method="_on_mask_2_but_pressed"]
