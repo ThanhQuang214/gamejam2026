@@ -84,4 +84,5 @@ offset_bottom = 3.05176e-05
 texture = ExtResource("1_ewbh5")
 metadata/_edit_use_anchors_ = true
 
+[connection signal="pressed" from="mask1/mask1But" to="." method="_on_mask_1_but_pressed"]
 [connection signal="pressed" from="mask2/mask2But" to="." method="_on_mask_2_but_pressed"]

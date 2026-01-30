@@ -1,6 +1,11 @@
 extends Node
 
 signal mask2_active
+signal mask1_active
+signal boost_jump
+
+signal windup
+signal winddown
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
