@@ -58,6 +58,8 @@ texture = ExtResource("2_l1v76")
 0:0/animation_frame_5/duration = 1.0
 0:0/animation_frame_6/duration = 1.0
 0:0/0 = 0
+0:4/0 = 0
+1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_din8e"]
 physics_layer_0/collision_layer = 4
