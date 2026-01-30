@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=3 format=3 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7biu0"]
+a = Vector2(-152, 109)
+b = Vector2(183, 109)
 
 [node name="Gameplay" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_7biu0")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_7biu0")
