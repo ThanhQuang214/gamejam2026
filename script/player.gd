@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 200
 const JUMP_VELOCITY = -250
-var mask2: bool
+var mask2: bool = false
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 func _ready() -> void:
@@ -30,10 +30,12 @@ func _physics_process(delta: float) -> void:
 func _mask2_power() -> void:
 	if mask2:
 		set_collision_mask_value(3,false)
-		mask2 = true
+		mask2 = false
+		print("false")
 	else:
 		set_collision_mask_value(3,true)
 		mask2 = true
+		print("trigger")
 
 func update_animation(direction: float) -> void:
 	# Lật nhân vật theo hướng chạy

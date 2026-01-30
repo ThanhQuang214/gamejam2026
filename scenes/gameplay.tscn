@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="2_l1v76"]
-[ext_resource type="PackedScene" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
+[ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1v76"]
 texture = ExtResource("2_00tan")
@@ -85,6 +85,7 @@ texture = ExtResource("2_00tan")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_din8e"]
 texture = ExtResource("2_l1v76")
 0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
 0:0/animation_columns = 4
 0:0/animation_speed = 4.0
@@ -108,7 +109,7 @@ texture = ExtResource("2_l1v76")
 
 [sub_resource type="TileSet" id="TileSet_din8e"]
 physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 4
+physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_ocj2s")
 sources/1 = SubResource("TileSetAtlasSource_din8e")
 
@@ -118,6 +119,7 @@ y_sort_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_7biu0")]
 
 [node name="Map" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Ground" type="TileMapLayer" parent="Map"]
 y_sort_enabled = true
@@ -125,6 +127,7 @@ tile_map_data = PackedByteArray("AAD8/wQABAAAAAAAAAD9/wQABAABAAAAAAD+/wQABAABAAA
 tile_set = SubResource("TileSet_ct7aa")
 
 [node name="Water" type="TileMapLayer" parent="Map"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAKAAMAAQAAAAQAAAAKAAQAAQABAAQAAAALAAQAAQABAAQAAAAMAAQAAQABAAQAAAANAAQAAQABAAQAAAAOAAQAAQABAAQAAAALAAMAAQAAAAQAAAAMAAMAAQAAAAQAAAANAAMAAQAAAAQAAAAOAAMAAQAAAAQAAAAKAAIAAQAAAAAAAAALAAIAAQAAAAAAAAAMAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_din8e")
 
