@@ -54,6 +54,14 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Normal"
+2d_physics/layer_2="mask1"
+2d_physics/layer_3="mask2"
+2d_physics/layer_4="mask3"
+2d_physics/layer_5="mask4"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
