@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="2_l1v76"]
-[ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
+[ext_resource type="PackedScene" uid="uid://govooc5dwl50" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1v76"]
 texture = ExtResource("2_00tan")
