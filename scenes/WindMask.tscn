@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4n6rsec2y6g1"]
+
+[ext_resource type="Texture2D" uid="uid://rj201wbxtatm" path="res://asset/mask/wind_mask.png" id="1_hdd2q"]
+[ext_resource type="Script" uid="uid://blpyxw1v4gfrs" path="res://script/WindMaskItem.gd" id="1_qnv5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnv5w"]
+atlas = ExtResource("1_hdd2q")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7d8ao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnv5w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wstnc"]
+radius = 21.0
+height = 64.0
+
+[node name="WindMask" type="Area2D"]
+script = ExtResource("1_qnv5w")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7d8ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_wstnc")
