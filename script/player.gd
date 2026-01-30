@@ -30,9 +30,16 @@ func update_animation(direction: float) -> void:
 	if direction != 0:
 		sprite.flip_h = direction < 0
 
-	# Chọn animation
-	if is_on_floor():
-		if abs(velocity.x) > 10:
-			sprite.play("run")
+	# Ưu tiên animation trên không
+	if not is_on_floor():
+		if velocity.y < 0:
+			sprite.play("jump") # bay lên
 		else:
-			sprite.play("idle")
+			sprite.play("fall") # rơi xuống
+		return
+
+	# Animation dưới đất
+	if abs(velocity.x) > 10:
+		sprite.play("run")
+	else:
+		sprite.play("idle")
