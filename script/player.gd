@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 200
+const JUMP_VELOCITY = -250
+var mask2: bool = false
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+func _ready() -> void:
+	Global.mask2_active.connect(_mask2_power)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,6 +27,15 @@ func _physics_process(delta: float) -> void:
 	update_animation(direction)
 	move_and_slide()
 
+func _mask2_power() -> void:
+	if mask2:
+		set_collision_mask_value(3,false)
+		mask2 = false
+		print("false")
+	else:
+		set_collision_mask_value(3,true)
+		mask2 = true
+		print("trigger")
 
 func update_animation(direction: float) -> void:
 	# Lật nhân vật theo hướng chạy
