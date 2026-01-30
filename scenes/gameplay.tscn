@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=13 format=4 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="Texture2D" uid="uid://cclynjr1ohon0" path="res://asset/map/ground.png" id="1_00tan"]
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="2_00tan"]
 [ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="2_l1v76"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
+[ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/wind.tscn" id="5_din8e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1v76"]
 texture = ExtResource("2_00tan")
@@ -129,5 +130,8 @@ tile_set = SubResource("TileSet_ct7aa")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAKAAMAAQAAAAQAAAAKAAQAAQABAAQAAAALAAQAAQABAAQAAAAMAAQAAQABAAQAAAANAAQAAQABAAQAAAAOAAQAAQABAAQAAAALAAMAAQAAAAQAAAAMAAMAAQAAAAQAAAANAAMAAQAAAAQAAAAOAAMAAQAAAAQAAAAKAAIAAQAAAAAAAAALAAIAAQAAAAAAAAAMAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_din8e")
+
+[node name="Wind" parent="Map" instance=ExtResource("5_din8e")]
+position = Vector2(144, 8)
 
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]

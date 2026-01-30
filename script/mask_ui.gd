@@ -28,3 +28,8 @@ func _on_texture_button_pressed() -> void:
 func _on_mask_2_but_pressed() -> void:
 	Global.emit_signal("mask2_active")
 	close()
+
+
+func _on_mask_1_but_pressed() -> void:
+	Global.emit_signal("mask1_active")
+	close()
