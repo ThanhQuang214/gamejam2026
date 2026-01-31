@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://dbgh4l88dfyqy"]
+[gd_scene load_steps=13 format=4 uid="uid://bn52cca2g5i3o"]
 
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="1_4pb43"]
 [ext_resource type="PackedScene" uid="uid://clvbsy5wvyomd" path="res://scenes/FunctionalObject/cross_bow.tscn" id="1_w343t"]
@@ -8,12 +8,13 @@
 [ext_resource type="TileSet" uid="uid://ddldhc7ogioag" path="res://resources/water.tres" id="5_1t3hd"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="6_70h04"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="7_jktqh"]
-[ext_resource type="PackedScene" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
-[ext_resource type="AudioStream" uid="uid://dr273odoucuib" path="res://Sound/Piano music.mp3" id="9_ytfl3"]
+[ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
+[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/audio.tscn" id="10_c6lnw"]
 [ext_resource type="Texture2D" uid="uid://bngukiur3oxgt" path="res://asset/map/BG1.png" id="11_cu3pm"]
-[ext_resource type="PackedScene" path="res://scenes/portal.tscn" id="12_aras6"]
+[ext_resource type="PackedScene" uid="uid://c6iv5pf5o3xaw" path="res://scenes/portal.tscn" id="12_aras6"]
 
 [node name="Lv1" type="Node2D"]
+position = Vector2(-3, -3)
 
 [node name="CrossBow" parent="." instance=ExtResource("1_w343t")]
 position = Vector2(-932, -807)
@@ -101,16 +102,8 @@ position = Vector2(-682, -968)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
-[node name="Audio" type="Node2D" parent="."]
-
-[node name="AudioBG" type="AudioStreamPlayer2D" parent="Audio"]
-position = Vector2(-347, -910)
-stream = ExtResource("9_ytfl3")
-volume_db = 8.0
-autoplay = true
-max_distance = 4096.0
-attenuation = 0.138696
-parameters/looping = true
+[node name="AudioEvent" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("10_c6lnw")]
+Player = NodePath("../Player")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 show_behind_parent = true
