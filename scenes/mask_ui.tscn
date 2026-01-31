@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cs6antnughaou" path="res://asset/ui/spirit_mask_ui.png" id="9_gv6nk"]
 
 [node name="maskUi" type="Control"]
-visible = false
 layout_mode = 3
 anchor_left = 0.271701
 anchor_right = 0.810764

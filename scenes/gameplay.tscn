@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=5 format=3 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="PackedScene" uid="uid://cuo6nenhjwkxj" path="res://scenes/map.tscn" id="2_l1v76"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
+[ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="4_ocj2s"]
 
 [node name="Gameplay" type="Node2D"]
 y_sort_enabled = true
@@ -10,5 +11,8 @@ y_sort_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_7biu0")]
 
 [node name="Map" parent="." instance=ExtResource("2_l1v76")]
+position = Vector2(-16, -43)
 
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("4_ocj2s")]
