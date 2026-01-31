@@ -7,6 +7,7 @@
 height = 88.0
 
 [node name="TheFool" type="Area2D"]
+collision_mask = 17
 script = ExtResource("1_wengg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

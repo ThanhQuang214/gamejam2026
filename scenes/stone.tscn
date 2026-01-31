@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc3lukjnv4te6"]
+
+[ext_resource type="Texture2D" uid="uid://46rjk6q8pdg4" path="res://asset/map/giant_stone.png" id="1_hmdus"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuldt"]
+size = Vector2(24, 26)
+
+[node name="Stone" type="RigidBody2D"]
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hmdus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_tuldt")

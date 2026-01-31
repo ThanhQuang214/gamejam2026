@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 150
 const JUMP_VELOCITY = -250
 var mask: int = 0
-var giant: bool = true
+var giant: bool = false
 var mask3: bool = false
 
 var Jump_High = 1
@@ -21,7 +21,6 @@ func _ready() -> void:
 	
 	Global.boost_jump.connect(_boost_jump)
 	Global.dead.connect(revive)
-	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -41,6 +40,10 @@ func _physics_process(delta: float) -> void:
 
 	update_animation(direction)
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c =get_slide_collision(i)
+		if c.get_collider() is RigidBody2D and giant:
+			c.get_collider().apply_central_impulse(-c.get_normal() * 40)
 
 func revive():
 	global_position = Global.returnCoordinate
@@ -100,12 +103,12 @@ func _boost_jump():
 	print("buff jump")
 
 func up_giant():
-	if giant and mask3:
+	if not giant and mask3:
 		scale = Vector2(2,2)
-		giant = false
-	elif not giant:
-		scale = Vector2(1,1)
 		giant = true
+	elif giant:
+		scale = Vector2(1,1)
+		giant = false
 
 func update_animation(direction: float) -> void:
 	# Lật nhân vật theo hướng chạy
