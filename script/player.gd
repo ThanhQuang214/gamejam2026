@@ -7,6 +7,7 @@ var mask: int = 0
 var Jump_High = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var aura:AnimatedSprite2D = $Aura
 func _ready() -> void:
 	Global.mask4_active.connect(_mask4_power)
 	Global.mask3_active.connect(_mask3_power)
@@ -54,6 +55,7 @@ func _mask4_power() -> void:
 		return
 	
 	mask = 4
+	aura.play("mask4")
 
 func _mask3_power() -> void:
 	_mask_power_reset()
@@ -62,7 +64,7 @@ func _mask3_power() -> void:
 		return
 	
 	mask = 3
-
+	aura.play("mask3")
 func _mask2_power() -> void:
 	_mask_power_reset()
 	if mask == 2:
@@ -71,7 +73,7 @@ func _mask2_power() -> void:
 		
 	set_collision_mask_value(3, true)
 	mask = 2
-
+	aura.play("mask2")
 func _mask1_power() -> void:
 	_mask_power_reset()
 	if mask == 1:
@@ -80,7 +82,7 @@ func _mask1_power() -> void:
 		
 	Global.emit_signal("windup")
 	mask = 1
-
+	aura.play("mask1")
 func _boost_jump():
 	Jump_High = 2
 	print("buff jump")
