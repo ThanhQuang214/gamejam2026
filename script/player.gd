@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 	update_animation(direction)
 	move_and_slide()
 	for i in get_slide_collision_count():
-		var c =get_slide_collision(i)
+		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D and giant:
 			c.get_collider().apply_central_impulse(-c.get_normal() * 40)
 
@@ -58,6 +58,7 @@ func _mask_power_reset() -> void:
 	
 	if (mask == 3):
 		mask3 = false
+		
 	if (mask == 4):
 		set_collision_mask_value(5,true)
 
@@ -80,6 +81,7 @@ func _mask3_power() -> void:
 	mask = 3
 	mask3 = true
 	aura.play("mask3")
+	
 func _mask2_power() -> void:
 	_mask_power_reset()
 	if mask == 2:
@@ -89,6 +91,7 @@ func _mask2_power() -> void:
 	set_collision_mask_value(3, true)
 	mask = 2
 	aura.play("mask2")
+	
 func _mask1_power() -> void:
 	_mask_power_reset()
 	if mask == 1:
@@ -100,7 +103,6 @@ func _mask1_power() -> void:
 	aura.play("mask1")
 func _boost_jump():
 	Jump_High = 2
-	print("buff jump")
 
 func up_giant():
 	if not giant and mask3:
@@ -108,6 +110,7 @@ func up_giant():
 		giant = true
 	elif giant:
 		scale = Vector2(1,1)
+		_mask_power_reset()
 		giant = false
 
 func update_animation(direction: float) -> void:

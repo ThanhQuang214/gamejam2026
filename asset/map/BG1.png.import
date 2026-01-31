@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du0n87goq18fa"
-path="res://.godot/imported/pillar.png-090f93bd34c514848cd291fbf777de0b.ctex"
+uid="uid://bngukiur3oxgt"
+path="res://.godot/imported/BG1.png-451dd6b2d6ec8dff5da26a7ec7ea8214.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/background/pillar.png"
-dest_files=["res://.godot/imported/pillar.png-090f93bd34c514848cd291fbf777de0b.ctex"]
+source_file="res://asset/map/BG1.png"
+dest_files=["res://.godot/imported/BG1.png-451dd6b2d6ec8dff5da26a7ec7ea8214.ctex"]
 
 [params]
 
