@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 200
+const SPEED = 150
 const JUMP_VELOCITY = -250
+const FALL_SPEED_ADJUST = 1
 var mask4: bool = false
 var mask3: bool = false
 var mask2: bool = false
@@ -20,7 +21,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta * FALL_SPEED_ADJUST
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_jump") and is_on_floor():
