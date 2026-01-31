@@ -1,9 +1,14 @@
 extends Node
 
+signal mask_change
 signal mask4_active
 signal mask3_active
 signal mask2_active
 signal mask1_active
+signal mask_reset
+
+signal giant
+
 signal boost_jump
 
 signal windup

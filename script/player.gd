@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 150
 const JUMP_VELOCITY = -250
 var mask: int = 0
+var giant: bool = true
+var mask3: bool = false
 
 var Jump_High = 1
 
@@ -13,6 +15,9 @@ func _ready() -> void:
 	Global.mask3_active.connect(_mask3_power)
 	Global.mask2_active.connect(_mask2_power)
 	Global.mask1_active.connect(_mask1_power)
+	Global.mask_reset.connect(_mask_power_reset)
+	
+	Global.giant.connect(up_giant)
 	
 	Global.boost_jump.connect(_boost_jump)
 	Global.dead.connect(revive)
@@ -41,12 +46,17 @@ func revive():
 	global_position = Global.returnCoordinate
 
 func _mask_power_reset() -> void:
+	aura.play("mask0")
 	if (mask == 2):
 		set_collision_mask_value(3, false)
 	
 	if (mask == 1):
 		Global.emit_signal("winddown")
 	
+	if (mask == 3):
+		mask3 = false
+	if (mask == 4):
+		set_collision_mask_value(5,true)
 
 func _mask4_power() -> void:
 	_mask_power_reset()
@@ -55,6 +65,7 @@ func _mask4_power() -> void:
 		return
 	
 	mask = 4
+	set_collision_mask_value(5,false)
 	aura.play("mask4")
 
 func _mask3_power() -> void:
@@ -64,6 +75,7 @@ func _mask3_power() -> void:
 		return
 	
 	mask = 3
+	mask3 = true
 	aura.play("mask3")
 func _mask2_power() -> void:
 	_mask_power_reset()
@@ -86,6 +98,15 @@ func _mask1_power() -> void:
 func _boost_jump():
 	Jump_High = 2
 	print("buff jump")
+
+func up_giant():
+	if giant and mask3:
+		scale = Vector2(2,2)
+		giant = false
+	elif not giant:
+		scale = Vector2(1,1)
+		giant = true
+
 func update_animation(direction: float) -> void:
 	# Lật nhân vật theo hướng chạy
 	if direction != 0:

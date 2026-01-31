@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://gl60rg34go2s"]
+
+[ext_resource type="Script" uid="uid://dlf1r1qnuiugw" path="res://script/the_fool.gd" id="1_wengg"]
+[ext_resource type="Texture2D" uid="uid://ci6scds8l2r5u" path="res://asset/map/thefool.png" id="2_6vxbp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skatf"]
+height = 88.0
+
+[node name="TheFool" type="Area2D"]
+script = ExtResource("1_wengg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
+shape = SubResource("CapsuleShape2D_skatf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6vxbp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
