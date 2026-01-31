@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://dbgh4l88dfyqy"]
+[gd_scene load_steps=14 format=4 uid="uid://dbgh4l88dfyqy"]
 
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="1_4pb43"]
+[ext_resource type="PackedScene" uid="uid://dvxd1i6a3csun" path="res://scenes/mess.tscn" id="1_c6lnw"]
 [ext_resource type="PackedScene" uid="uid://clvbsy5wvyomd" path="res://scenes/FunctionalObject/cross_bow.tscn" id="1_w343t"]
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="2_840sv"]
 [ext_resource type="TileSet" uid="uid://blohjbcue1bu" path="res://resources/overworld_ground.tres" id="3_1t3hd"]
@@ -9,12 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="6_70h04"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="7_jktqh"]
 [ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
-[ext_resource type="PackedScene" path="res://scenes/audio.tscn" id="10_c6lnw"]
+[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/FunctionalObject/audio.tscn" id="10_c6lnw"]
 [ext_resource type="Texture2D" uid="uid://bngukiur3oxgt" path="res://asset/map/BG1.png" id="11_cu3pm"]
 [ext_resource type="PackedScene" uid="uid://c6iv5pf5o3xaw" path="res://scenes/portal.tscn" id="12_aras6"]
 
 [node name="Lv1" type="Node2D"]
 position = Vector2(-3, -3)
+
+[node name="Mess" parent="." instance=ExtResource("1_c6lnw")]
+position = Vector2(410.674, -151.201)
+info = "Có lẽ mặt nạ xám sẽ có ích"
 
 [node name="CrossBow" parent="." instance=ExtResource("1_w343t")]
 position = Vector2(-932, -807)
@@ -122,3 +127,4 @@ position = Vector2(-1055, 6)
 
 [node name="Portal" parent="." instance=ExtResource("12_aras6")]
 position = Vector2(-1152, -787)
+next_scene_link = "res://scenes/lv3.tscn"

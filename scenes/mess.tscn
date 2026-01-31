@@ -20,6 +20,7 @@ shape = SubResource("CircleShape2D_1v527")
 
 [node name="text" type="RichTextLabel" parent="."]
 visible = false
+self_modulate = Color(0.834204, 0.169343, 0.20443, 1)
 offset_left = -114.0
 offset_top = -96.0
 offset_right = 111.0

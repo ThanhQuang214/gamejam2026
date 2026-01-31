@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dtvsjbb40os2k"]
+[gd_scene load_steps=15 format=4 uid="uid://dtvsjbb40os2k"]
 
 [ext_resource type="Texture2D" uid="uid://be3qvjocy5wje" path="res://asset/map/map_02.png" id="1_swhb1"]
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="2_iiiqc"]
@@ -8,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://gl60rg34go2s" path="res://scenes/the_fool.tscn" id="6_bsf58"]
 [ext_resource type="PackedScene" uid="uid://bc3lukjnv4te6" path="res://scenes/stone.tscn" id="7_5e5ts"]
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="8_1ooeq"]
-[ext_resource type="PackedScene" path="res://scenes/audio.tscn" id="9_8lg3j"]
+[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/FunctionalObject/audio.tscn" id="9_8lg3j"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="9_iiiqc"]
-[ext_resource type="PackedScene" path="res://scenes/background_2.tscn" id="11_b8sr3"]
+[ext_resource type="PackedScene" uid="uid://3wgckextpuwg" path="res://scenes/background_2.tscn" id="11_b8sr3"]
+[ext_resource type="PackedScene" uid="uid://dvxd1i6a3csun" path="res://scenes/mess.tscn" id="12_eq270"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1upow"]
 texture = ExtResource("1_swhb1")
@@ -128,6 +129,14 @@ position = Vector2(22, 80)
 Player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("8_1ooeq")]
-position = Vector2(-75, 80)
+position = Vector2(-73, 76)
 
 [node name="background2" parent="." instance=ExtResource("11_b8sr3")]
+
+[node name="Mess" parent="." instance=ExtResource("12_eq270")]
+position = Vector2(825, -383)
+info = "Chiến thắng xứng đáng"
+
+[node name="Mess2" parent="." instance=ExtResource("12_eq270")]
+position = Vector2(357, -462)
+info = "Một bước nữa thôi"

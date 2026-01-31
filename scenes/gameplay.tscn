@@ -1,18 +1,26 @@
-[gd_scene load_steps=9 format=4 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=11 format=4 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
+[ext_resource type="PackedScene" uid="uid://dvxd1i6a3csun" path="res://scenes/mess.tscn" id="1_hbo4f"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
 [ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="4_ocj2s"]
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="5_din8e"]
 [ext_resource type="PackedScene" uid="uid://c57gf5ub41ijc" path="res://scenes/FunctionalObject/save_point.tscn" id="6_din8e"]
 [ext_resource type="TileSet" uid="uid://blohjbcue1bu" path="res://resources/overworld_ground.tres" id="7_4bh5q"]
 [ext_resource type="TileSet" uid="uid://ddldhc7ogioag" path="res://resources/water.tres" id="7_e124b"]
+[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/FunctionalObject/audio.tscn" id="8_101mb"]
 [ext_resource type="PackedScene" uid="uid://c6iv5pf5o3xaw" path="res://scenes/portal.tscn" id="11_ctvyo"]
 
 [node name="Gameplay" type="Node2D"]
 y_sort_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_7biu0")]
+[node name="Mess" parent="." instance=ExtResource("1_hbo4f")]
+position = Vector2(167, 41)
+info = "Press E To Swap"
+
+[node name="Mess2" parent="." instance=ExtResource("1_hbo4f")]
+position = Vector2(664, 42)
+info = "Thử dùng mặt nạ xanh dương đi"
 
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]
 
@@ -51,3 +59,10 @@ tile_set = ExtResource("7_e124b")
 [node name="Portal" parent="." instance=ExtResource("11_ctvyo")]
 position = Vector2(1054, 26)
 next_scene_link = "res://scenes/lv1.tscn"
+
+[node name="AudioEvent" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("8_101mb")]
+position = Vector2(2, -7)
+Player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("1_7biu0")]
+position = Vector2(-30, 40)
