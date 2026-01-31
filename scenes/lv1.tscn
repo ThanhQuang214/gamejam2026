@@ -95,8 +95,10 @@ position = Vector2(-661, -809)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-348, -907)
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="AudioBG" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(-347, -910)
 stream = ExtResource("9_ytfl3")
 volume_db = 8.0
 autoplay = true
