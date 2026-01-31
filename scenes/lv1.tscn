@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bn52cca2g5i3o"]
+[gd_scene load_steps=13 format=4 uid="uid://dbgh4l88dfyqy"]
 
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="1_4pb43"]
 [ext_resource type="PackedScene" uid="uid://clvbsy5wvyomd" path="res://scenes/FunctionalObject/cross_bow.tscn" id="1_w343t"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="6_70h04"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="7_jktqh"]
 [ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
-[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/audio.tscn" id="10_c6lnw"]
+[ext_resource type="PackedScene" path="res://scenes/audio.tscn" id="10_c6lnw"]
 [ext_resource type="Texture2D" uid="uid://bngukiur3oxgt" path="res://asset/map/BG1.png" id="11_cu3pm"]
 [ext_resource type="PackedScene" uid="uid://c6iv5pf5o3xaw" path="res://scenes/portal.tscn" id="12_aras6"]
 
