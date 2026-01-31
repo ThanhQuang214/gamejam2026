@@ -18,5 +18,5 @@ position = Vector2(-2, -2)
 
 [node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_t6174")
-volume_db = 10.0
-max_distance = 360.0
+volume_db = 15.0
+max_distance = 400.0
