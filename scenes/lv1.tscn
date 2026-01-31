@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dbgh4l88dfyqy"]
+[gd_scene load_steps=12 format=4 uid="uid://cd2lkijf8r5om"]
 
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="1_4pb43"]
 [ext_resource type="PackedScene" uid="uid://clvbsy5wvyomd" path="res://scenes/FunctionalObject/cross_bow.tscn" id="1_w343t"]
@@ -8,8 +8,9 @@
 [ext_resource type="TileSet" uid="uid://ddldhc7ogioag" path="res://resources/water.tres" id="5_1t3hd"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="6_70h04"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="7_jktqh"]
-[ext_resource type="PackedScene" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
+[ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
 [ext_resource type="AudioStream" uid="uid://dr273odoucuib" path="res://Sound/Piano music.mp3" id="9_ytfl3"]
+[ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="11_cu3pm"]
 
 [node name="Lv1" type="Node2D"]
 
@@ -17,7 +18,7 @@
 position = Vector2(-932, -807)
 
 [node name="Player" parent="." instance=ExtResource("2_840sv")]
-position = Vector2(-1055, -798)
+position = Vector2(-1055, 6)
 
 [node name="ground" type="TileMapLayer" parent="."]
 position = Vector2(-12, 0)
@@ -114,3 +115,5 @@ volume_db = 8.0
 autoplay = true
 max_distance = 4096.0
 attenuation = 0.138696
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("11_cu3pm")]
