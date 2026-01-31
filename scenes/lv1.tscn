@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
 [ext_resource type="AudioStream" uid="uid://dr273odoucuib" path="res://Sound/Piano music.mp3" id="9_ytfl3"]
 [ext_resource type="AudioStream" uid="uid://di5kl3tk0ihoh" path="res://Sound/footstep.mp3" id="11_cu3pm"]
+[ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="11_cu3pm"]
 
 [node name="Lv1" type="Node2D"]
 
