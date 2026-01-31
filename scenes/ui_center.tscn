@@ -18,5 +18,6 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="maskUi" parent="." instance=ExtResource("3_kywrn")]
+visible = false
 
 [connection signal="pressed" from="TextureButton" to="maskUi" method="_on_texture_button_pressed"]
