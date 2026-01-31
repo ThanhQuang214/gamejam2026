@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bscmn18oa3y6s"
-path="res://.godot/imported/Bow.png-6e19024c2dd2e51e3656937bae9b209b.ctex"
+path="res://.godot/imported/cross_bow.png-75d2f5a9566fddc6ac77663124cd487a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/map/Bow.png"
-dest_files=["res://.godot/imported/Bow.png-6e19024c2dd2e51e3656937bae9b209b.ctex"]
+source_file="res://asset/map/cross_bow.png"
+dest_files=["res://.godot/imported/cross_bow.png-75d2f5a9566fddc6ac77663124cd487a.ctex"]
 
 [params]
 
