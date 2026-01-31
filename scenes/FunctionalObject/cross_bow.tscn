@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://clctqqgwdbexe"]
+[gd_scene load_steps=4 format=3 uid="uid://clvbsy5wvyomd"]
 
 [ext_resource type="Script" uid="uid://28qcu3nb4ple" path="res://script/cross_bow.gd" id="1_s2w6f"]
 [ext_resource type="Texture2D" uid="uid://bscmn18oa3y6s" path="res://asset/map/cross_bow.png" id="1_t7k68"]
-[ext_resource type="PackedScene" uid="uid://crngke0wglysa" path="res://scenes/FunctionalObject/arrow.tscn" id="2_vw0lr"]
+[ext_resource type="PackedScene" uid="uid://djk346it5h3io" path="res://scenes/FunctionalObject/arrow.tscn" id="2_vw0lr"]
 
 [node name="CrossBow" type="Node2D" node_paths=PackedStringArray("shoot_point")]
 script = ExtResource("1_s2w6f")

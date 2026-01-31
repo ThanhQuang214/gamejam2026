@@ -2,7 +2,7 @@ extends Node2D
 
 @export var arrow_scene: PackedScene
 @export var shoot_point: Node2D
-@export var shoot_speed := 300.0
+@export var shoot_speed := 100.0
 @export var shoot_direction = Vector2(1, 0)
 
 var cooldown: float = 5
@@ -24,11 +24,11 @@ func _process(delta: float) -> void:
 	burstcooldown -= delta
 	
 	if (cooldown <= 0):
-		cooldown = 5
+		cooldown = 6
 		burstcnt = 3
 		burstcooldown = 0
 	
 	if (burstcnt > 0 && burstcooldown <= 0):
 		burstcnt -= 1
-		burstcooldown = 0.7
+		burstcooldown = 1.3
 		shoot(shoot_direction)
