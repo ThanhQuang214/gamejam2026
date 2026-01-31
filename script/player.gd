@@ -2,15 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 200
 const JUMP_VELOCITY = -250
-var mask4: bool = false
-var mask3: bool = false
-var mask2: bool = false
-var mask1: bool = false
 var mask: int = 0
+
 var Jump_High = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 func _ready() -> void:
+	Global.mask4_active.connect(_mask4_power)
+	Global.mask3_active.connect(_mask3_power)
 	Global.mask2_active.connect(_mask2_power)
 	Global.mask1_active.connect(_mask1_power)
 	
@@ -40,32 +39,47 @@ func _physics_process(delta: float) -> void:
 func revive():
 	global_position = Global.returnCoordinate
 
+func _mask_power_reset() -> void:
+	if (mask == 2):
+		set_collision_mask_value(3, false)
+	
+	if (mask == 1):
+		Global.emit_signal("winddown")
+	
+
+func _mask4_power() -> void:
+	_mask_power_reset()
+	if (mask == 4):
+		mask = 0
+		return
+	
+	mask = 4
+
+func _mask3_power() -> void:
+	_mask_power_reset()
+	if (mask == 3):
+		mask = 0
+		return
+	
+	mask = 3
+
 func _mask2_power() -> void:
-	if mask2:
-		mask2_off()
-	else:
-		set_collision_mask_value(3,true)
-		mask2 = true
-		print("water trigger")
-		mask1_off()
+	_mask_power_reset()
+	if mask == 2:
+		mask = 0
+		return
 		
-func mask2_off():
-	set_collision_mask_value(3,false)
-	mask2 = false
-	print("water fail")
+	set_collision_mask_value(3, true)
+	mask = 2
 
 func _mask1_power() -> void:
-	if mask1:
-		mask1_off()
-	else:
-		Global.emit_signal("windup")
-		mask1 = true
-		print("wind trigger")
-		mask2_off()
-func mask1_off():
-	Global.emit_signal("winddown")
-	mask1 = false
-	print("wind false")
+	_mask_power_reset()
+	if mask == 1:
+		mask = 0
+		return
+		
+	Global.emit_signal("windup")
+	mask = 1
 
 func _boost_jump():
 	Jump_High = 2
