@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://snlj6e15d5wg"]
+[gd_scene load_steps=11 format=3 uid="uid://snlj6e15d5wg"]
 
 [ext_resource type="Texture2D" uid="uid://ofwc6ii5i35h" path="res://asset/ui/pick_ui.png" id="1_ewbh5"]
 [ext_resource type="Script" uid="uid://vu7mtihjno51" path="res://script/mask_ui.gd" id="1_ykyxb"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://rj201wbxtatm" path="res://asset/mask/wind_mask.png" id="3_rf7mn"]
 [ext_resource type="Texture2D" uid="uid://5mqvouwbed0t" path="res://asset/ui/water_mask_ui.png" id="3_t35ak"]
 [ext_resource type="Texture2D" uid="uid://cqohf4r42fi8v" path="res://asset/ui/wind_mask_ui.png" id="4_kc65w"]
+[ext_resource type="Texture2D" uid="uid://waeoe8b7nl6m" path="res://asset/mask/joker_mask.png" id="7_aa02w"]
+[ext_resource type="Texture2D" uid="uid://b3jt1jn65qeyc" path="res://asset/ui/joker_mask_ui.png" id="8_gv6nk"]
+[ext_resource type="Texture2D" uid="uid://0afgney5i75g" path="res://asset/mask/spirit_mask.png" id="8_pwrun"]
+[ext_resource type="Texture2D" uid="uid://cs6antnughaou" path="res://asset/ui/spirit_mask_ui.png" id="9_gv6nk"]
 
 [node name="maskUi" type="Control"]
 visible = false
@@ -73,6 +77,17 @@ anchor_bottom = 0.553429
 texture = ExtResource("1_ewbh5")
 metadata/_edit_use_anchors_ = true
 
+[node name="mask3But" type="TextureButton" parent="mask3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_aa02w")
+texture_hover = ExtResource("8_gv6nk")
+stretch_mode = 0
+
 [node name="mask4" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -83,6 +98,17 @@ anchor_bottom = 0.570973
 offset_bottom = 3.05176e-05
 texture = ExtResource("1_ewbh5")
 metadata/_edit_use_anchors_ = true
+
+[node name="mask4But" type="TextureButton" parent="mask4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_pwrun")
+texture_hover = ExtResource("9_gv6nk")
+stretch_mode = 0
 
 [connection signal="pressed" from="mask1/mask1But" to="." method="_on_mask_1_but_pressed"]
 [connection signal="pressed" from="mask2/mask2But" to="." method="_on_mask_2_but_pressed"]
