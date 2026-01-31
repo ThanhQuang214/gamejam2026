@@ -7,13 +7,13 @@ func _ready() -> void:
 	isOpen = false
 	visible = false
 
-func open():
-	visible = true
-	isOpen = true
+func open(): pass
+	#visible = true
+	#isOpen = true
 	
-func close():
-	visible = false
-	isOpen = false
+func close(): pass
+	#visible = false
+	#isOpen = false
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_mask"):

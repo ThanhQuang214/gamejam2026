@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4tvc5h8t0lwc"]
+
+[ext_resource type="Script" uid="uid://bkcykip5sfr0b" path="res://script/audio.gd" id="1_f5a2e"]
+[ext_resource type="AudioStream" uid="uid://dr273odoucuib" path="res://Sound/Piano music.mp3" id="2_hlm5c"]
+[ext_resource type="AudioStream" uid="uid://di5kl3tk0ihoh" path="res://Sound/footstep.mp3" id="3_wdljl"]
+[ext_resource type="AudioStream" uid="uid://65l8y3fvckts" path="res://Sound/Jump.S.mp3" id="4_hlm5c"]
+[ext_resource type="AudioStream" uid="uid://mnuslcop1q4i" path="res://Sound/Phóng to.mp3" id="5_wdljl"]
+
+[node name="AudioEvent" type="Node2D"]
+script = ExtResource("1_f5a2e")
+
+[node name="AudioBG" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-347, -910)
+stream = ExtResource("2_hlm5c")
+volume_db = 8.0
+autoplay = true
+max_distance = 4096.0
+attenuation = 0.138696
+parameters/looping = true
+
+[node name="FootStep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wdljl")
+volume_db = 10.0
+parameters/looping = true
+
+[node name="Jumping" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hlm5c")
+volume_db = 10.0
+
+[node name="ScaleUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_wdljl")
+volume_db = 15.0
