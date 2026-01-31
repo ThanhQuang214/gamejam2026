@@ -135,6 +135,3 @@ tile_set = SubResource("TileSet_din8e")
 position = Vector2(144, 8)
 
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]
-
-[node name="WindMask" parent="." instance=ExtResource("6_din8e")]
-position = Vector2(292, -4)

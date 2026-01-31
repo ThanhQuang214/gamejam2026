@@ -59,7 +59,7 @@ func mask1_off():
 	print("wind false")
 
 func _boost_jump():
-	Jump_High = 3
+	Jump_High = 2
 	print("buff jump")
 func update_animation(direction: float) -> void:
 	# Lật nhân vật theo hướng chạy
