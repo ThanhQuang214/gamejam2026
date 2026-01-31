@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 200
 const JUMP_VELOCITY = -250
+var mask4: bool = false
+var mask3: bool = false
 var mask2: bool = false
 var mask1: bool = false
 var mask: int = 0
@@ -13,6 +15,7 @@ func _ready() -> void:
 	Global.mask1_active.connect(_mask1_power)
 	
 	Global.boost_jump.connect(_boost_jump)
+	Global.dead.connect(revive)
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -34,6 +37,9 @@ func _physics_process(delta: float) -> void:
 	update_animation(direction)
 	move_and_slide()
 
+func revive():
+	global_position = Global.returnCoordinate
+
 func _mask2_power() -> void:
 	if mask2:
 		mask2_off()
@@ -42,6 +48,7 @@ func _mask2_power() -> void:
 		mask2 = true
 		print("water trigger")
 		mask1_off()
+		
 func mask2_off():
 	set_collision_mask_value(3,false)
 	mask2 = false

@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://cuo6nenhjwkxj"]
+[gd_scene load_steps=10 format=4 uid="uid://bjsfrrk604b"]
 
 [ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="1_0cso3"]
 [ext_resource type="Texture2D" uid="uid://cclynjr1ohon0" path="res://asset/map/ground.png" id="2_2klcf"]
 [ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="3_2lpho"]
-[ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/wind.tscn" id="4_nakos"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jh32y"]
 texture = ExtResource("1_0cso3")
@@ -123,6 +122,3 @@ tile_set = SubResource("TileSet_blm8a")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAKAAMAAQAAAAQAAAAKAAQAAQABAAQAAAALAAQAAQABAAQAAAAMAAQAAQABAAQAAAANAAQAAQABAAQAAAAOAAQAAQABAAQAAAALAAMAAQAAAAQAAAAMAAMAAQAAAAQAAAANAAMAAQAAAAQAAAAOAAMAAQAAAAQAAAAKAAIAAQAAAAAAAAALAAIAAQAAAAAAAAAMAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_gw3fx")
-
-[node name="Wind" parent="." instance=ExtResource("4_nakos")]
-position = Vector2(144, 8)
