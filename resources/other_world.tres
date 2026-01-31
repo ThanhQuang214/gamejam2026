@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://iq3n5qga2q7n"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cen0a468kmheu"]
 
 [ext_resource type="Texture2D" uid="uid://br5rywqbgxvsh" path="res://asset/map/map03.png" id="1_rmq36"]
 
@@ -37,7 +37,7 @@ texture = ExtResource("1_rmq36")
 2:2/size_in_atlas = Vector2i(2, 2)
 2:2/0 = 0
 2:2/0/texture_origin = Vector2i(0, 4)
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.6477, -1.25901, 8, -2.51802, 14.3887, -1.25901, 15.1081, 10.7915, -15.8276, 10.2519)
+2:2/0/physics_layer_1/polygon_0/points = PackedVector2Array(-10.7915, -0.899294, 12.4103, -0.899294, 13.6693, 12.5901, -12.0505, 12.0505)
 0:2/0 = 0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.0576, 8, -2.51802, 8, 8, -8, 8)
 1:2/0 = 0
@@ -51,4 +51,5 @@ texture = ExtResource("1_rmq36")
 [resource]
 physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sy5ub")

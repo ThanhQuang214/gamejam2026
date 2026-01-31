@@ -14,27 +14,18 @@ offset_bottom = 40.0
 [node name="Play" type="Button" parent="ButtonManager"]
 layout_mode = 0
 offset_left = 460.0
-offset_top = 198.0
+offset_top = 261.0
 offset_right = 710.0
-offset_bottom = 298.0
+offset_bottom = 361.0
 text = "Chơi"
-
-[node name="Load" type="Button" parent="ButtonManager"]
-layout_mode = 0
-offset_left = 460.0
-offset_top = 316.0
-offset_right = 710.0
-offset_bottom = 416.0
-text = "Tải"
 
 [node name="Exit" type="Button" parent="ButtonManager"]
 layout_mode = 0
 offset_left = 460.0
-offset_top = 435.0
+offset_top = 395.0
 offset_right = 710.0
-offset_bottom = 535.0
+offset_bottom = 495.0
 text = "Thoát"
 
 [connection signal="pressed" from="ButtonManager/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="ButtonManager/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="ButtonManager/Exit" to="." method="_on_exit_pressed"]

@@ -1,10 +1,10 @@
-[gd_scene load_steps=52 format=3 uid="uid://baqt5rfmly5oc"]
+[gd_scene load_steps=53 format=3 uid="uid://baqt5rfmly5oc"]
 
 [ext_resource type="Texture2D" uid="uid://c7qvu727ljjs7" path="res://asset/player/player.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cvo2fn1jcjrki" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://xmqe8g0s1s3u" path="res://asset/player/aura.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bqlgdrrn0g5yv" path="res://asset/player/dead_effect.png" id="3_dqkch"]
-[ext_resource type="AudioStream" uid="uid://74rwlbgy2dbp" path="res://Sound/UhuhDie.mp3" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://74rwlbgy2dbp" path="res://Sound/UhuhDie.mp3" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hax0n"]
 atlas = ExtResource("2_qhqgy")
@@ -405,3 +405,7 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_qlg0r")
+volume_db = 10.0

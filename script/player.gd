@@ -65,6 +65,7 @@ func revive():
 		
 	sprite.flip_h = velocity.x < 0
 	sprite.play("die")
+	$AudioStreamPlayer2D.play()
 	
 
 func _mask_power_reset() -> void:
