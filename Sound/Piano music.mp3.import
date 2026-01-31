@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr273odoucuib"
+path="res://.godot/imported/Piano music.mp3-37063afb155b2238abaa902717fcbf7b.mp3str"
+
+[deps]
+
+source_file="res://Sound/Piano music.mp3"
+dest_files=["res://.godot/imported/Piano music.mp3-37063afb155b2238abaa902717fcbf7b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

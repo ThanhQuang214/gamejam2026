@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://detvbs2etvdrx"
+path="res://.godot/imported/Công tắc.mp3-102fc5a3ec3eb603dc95dc378dccc43d.mp3str"
+
+[deps]
+
+source_file="res://Sound/Công tắc.mp3"
+dest_files=["res://.godot/imported/Công tắc.mp3-102fc5a3ec3eb603dc95dc378dccc43d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
