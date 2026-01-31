@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c1b255ekerdrw"]
 
 [ext_resource type="Texture2D" uid="uid://c5r7p4uk4vkam" path="res://asset/ui/mask_ui.png" id="1_e5w0w"]
-[ext_resource type="Script" uid="uid://dir3eiklf3cs8" path="res://script/texture_button.gd" id="1_sl1qx"]
+[ext_resource type="Script" path="res://script/texture_button.gd" id="1_sl1qx"]
 [ext_resource type="Texture2D" uid="uid://dqa3w04g88v0s" path="res://asset/ui/mask_ui_close.png" id="2_kywrn"]
 [ext_resource type="Texture2D" uid="uid://rj201wbxtatm" path="res://asset/mask/wind_mask.png" id="3_4uoog"]
 [ext_resource type="PackedScene" uid="uid://snlj6e15d5wg" path="res://scenes/mask_ui.tscn" id="3_kywrn"]
@@ -17,10 +17,10 @@
 
 [node name="MaskButton" type="TextureButton" parent="."]
 anchors_preset = -1
-anchor_left = 0.0338542
-anchor_top = 0.16821
-anchor_right = 0.172743
-anchor_bottom = 0.365741
+anchor_left = 0.03125
+anchor_top = 0.0462963
+anchor_right = 0.163194
+anchor_bottom = 0.251543
 stretch_mode = 0
 script = ExtResource("1_sl1qx")
 mask_icons = Array[Texture2D]([ExtResource("1_e5w0w"), ExtResource("3_4uoog"), ExtResource("4_mvfkv"), ExtResource("5_xifd7"), ExtResource("6_u34oc"), ExtResource("2_kywrn"), ExtResource("8_0heoh"), ExtResource("9_gp42i"), ExtResource("10_otnke"), ExtResource("11_8b2a1")])
