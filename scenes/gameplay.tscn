@@ -9,8 +9,8 @@
 [ext_resource type="TileSet" uid="uid://blohjbcue1bu" path="res://resources/overworld_ground.tres" id="7_4bh5q"]
 [ext_resource type="TileSet" uid="uid://iq3n5qga2q7n" path="res://resources/other_world.tres" id="7_qixtg"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="8_e124b"]
-[ext_resource type="PackedScene" path="res://scenes/the_fool.tscn" id="9_101mb"]
-[ext_resource type="PackedScene" path="res://scenes/stone.tscn" id="10_hbo4f"]
+[ext_resource type="PackedScene" uid="uid://gl60rg34go2s" path="res://scenes/the_fool.tscn" id="9_101mb"]
+[ext_resource type="PackedScene" uid="uid://bc3lukjnv4te6" path="res://scenes/stone.tscn" id="10_hbo4f"]
 [ext_resource type="PackedScene" uid="uid://c6iv5pf5o3xaw" path="res://scenes/portal.tscn" id="11_ctvyo"]
 
 [node name="Gameplay" type="Node2D"]

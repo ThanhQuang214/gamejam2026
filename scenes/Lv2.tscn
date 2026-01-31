@@ -1,16 +1,16 @@
-[gd_scene load_steps=14 format=4 uid="uid://dhuwr1loe8n52"]
+[gd_scene load_steps=14 format=4 uid="uid://dtvsjbb40os2k"]
 
 [ext_resource type="Texture2D" uid="uid://be3qvjocy5wje" path="res://asset/map/map_02.png" id="1_swhb1"]
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="2_iiiqc"]
 [ext_resource type="PackedScene" uid="uid://c57gf5ub41ijc" path="res://scenes/FunctionalObject/save_point.tscn" id="3_8lg3j"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="4_b8sr3"]
 [ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="5_eq270"]
-[ext_resource type="PackedScene" path="res://scenes/the_fool.tscn" id="6_bsf58"]
-[ext_resource type="PackedScene" path="res://scenes/stone.tscn" id="7_5e5ts"]
+[ext_resource type="PackedScene" uid="uid://gl60rg34go2s" path="res://scenes/the_fool.tscn" id="6_bsf58"]
+[ext_resource type="PackedScene" uid="uid://bc3lukjnv4te6" path="res://scenes/stone.tscn" id="7_5e5ts"]
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="8_1ooeq"]
-[ext_resource type="PackedScene" uid="uid://c4tvc5h8t0lwc" path="res://scenes/audio.tscn" id="9_8lg3j"]
+[ext_resource type="PackedScene" path="res://scenes/audio.tscn" id="9_8lg3j"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="9_iiiqc"]
-[ext_resource type="PackedScene" uid="uid://3wgckextpuwg" path="res://scenes/background_2.tscn" id="11_b8sr3"]
+[ext_resource type="PackedScene" path="res://scenes/background_2.tscn" id="11_b8sr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1upow"]
 texture = ExtResource("1_swhb1")

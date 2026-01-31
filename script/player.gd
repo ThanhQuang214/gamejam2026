@@ -6,6 +6,9 @@ var mask: int = 0
 var giant: bool = false
 var mask3: bool = false
 
+var reviving: bool = false
+var reviveTime: float = 0
+
 var Jump_High = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -22,6 +25,17 @@ func _ready() -> void:
 	Global.boost_jump.connect(_boost_jump)
 	Global.dead.connect(revive)
 func _physics_process(delta: float) -> void:
+	if reviving == true:
+		reviveTime -= delta
+		if reviveTime <= 1:
+			global_position = Global.returnCoordinate
+		
+		if reviveTime <= 0:
+			reviving = false
+		else:
+			return
+		
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -46,7 +60,12 @@ func _physics_process(delta: float) -> void:
 			c.get_collider().apply_central_impulse(-c.get_normal() * 40)
 
 func revive():
-	global_position = Global.returnCoordinate
+	reviving = true
+	reviveTime = 1.3
+		
+	sprite.flip_h = velocity.x < 0
+	sprite.play("die")
+	
 
 func _mask_power_reset() -> void:
 	aura.play("mask0")
