@@ -4,6 +4,7 @@ const SPEED = 200
 const JUMP_VELOCITY = -250
 var mask2: bool = false
 var mask1: bool = false
+var mask: int = 0
 var Jump_High = 1
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -12,6 +13,7 @@ func _ready() -> void:
 	Global.mask1_active.connect(_mask1_power)
 	
 	Global.boost_jump.connect(_boost_jump)
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

@@ -3,14 +3,17 @@ extends Control
 var isOpen: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	isOpen = false
+	visible = false
 
 func open():
 	visible = true
 	isOpen = true
+	
 func close():
 	visible = false
 	isOpen = false
+	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_mask"):
 		if isOpen == false:
