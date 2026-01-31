@@ -18,6 +18,7 @@ func shoot(direction: Vector2):
 	arrow.setup(direction.normalized(), shoot_speed)
 
 	get_tree().current_scene.add_child(arrow)
+	$ShootingSound.play()
 
 func _process(delta: float) -> void:
 	cooldown -= delta

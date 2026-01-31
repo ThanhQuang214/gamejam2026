@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 			status = 1
 			countdown = 3
 			$AnimationPlayer.play("pulse_collider")
+			$AudioStreamPlayer2D.play()
 		else:
 			status = 0
 			countdown = 2

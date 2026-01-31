@@ -58,6 +58,7 @@ func _mask_power_reset() -> void:
 	
 	if (mask == 3):
 		mask3 = false
+		
 	if (mask == 4):
 		set_collision_mask_value(5,true)
 
@@ -100,7 +101,6 @@ func _mask1_power() -> void:
 	aura.play("mask1")
 func _boost_jump():
 	Jump_High = 2
-	print("buff jump")
 
 func up_giant():
 	if not giant and mask3:
@@ -108,6 +108,7 @@ func up_giant():
 		giant = true
 	elif giant:
 		scale = Vector2(1,1)
+		_mask_power_reset()
 		giant = false
 
 func update_animation(direction: float) -> void:
