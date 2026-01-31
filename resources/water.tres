@@ -1,0 +1,52 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://ddldhc7ogioag"]
+
+[ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="1_1wllt"]
+[ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="2_pccv8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlgqr"]
+texture = ExtResource("1_1wllt")
+0:3/animation_speed = 3.0
+0:3/animation_mode = 1
+0:3/animation_frame_0/duration = 1.0
+0:3/animation_frame_1/duration = 1.0
+0:3/animation_frame_2/duration = 1.0
+0:3/animation_frame_3/duration = 1.0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.359716, 8, -0.179857, 8, 8, -8, 8)
+0:4/animation_speed = 3.0
+0:4/animation_frame_0/duration = 1.0
+0:4/animation_frame_1/duration = 1.0
+0:4/animation_frame_2/duration = 1.0
+0:4/animation_frame_3/duration = 1.0
+0:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wslke"]
+texture = ExtResource("2_pccv8")
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+0:0/animation_columns = 4
+0:0/animation_speed = 4.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 5
+sources/0 = SubResource("TileSetAtlasSource_mlgqr")
+sources/1 = SubResource("TileSetAtlasSource_wslke")

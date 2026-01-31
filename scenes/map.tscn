@@ -1,124 +1,16 @@
-[gd_scene load_steps=10 format=4 uid="uid://bjsfrrk604b"]
+[gd_scene load_steps=3 format=4 uid="uid://bjsfrrk604b"]
 
-[ext_resource type="Texture2D" uid="uid://cpb4xc7pwopl8" path="res://asset/map/map_01.png" id="1_0cso3"]
-[ext_resource type="Texture2D" uid="uid://cclynjr1ohon0" path="res://asset/map/ground.png" id="2_2klcf"]
-[ext_resource type="Texture2D" uid="uid://d3fwavtlbmxfq" path="res://asset/map/water.png" id="3_2lpho"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jh32y"]
-texture = ExtResource("1_0cso3")
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.13675, 8, -4.31661, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.13675, 8, -4.31661, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.13675, 8, -4.31661, 8, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.13675, 8, -4.31661, 8, 8, -8, 8)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be0no"]
-texture = ExtResource("2_2klcf")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, -2.33816, 8, 8, -8, 8)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_blm8a"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jh32y")
-sources/4 = SubResource("TileSetAtlasSource_be0no")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlgqr"]
-texture = ExtResource("1_0cso3")
-0:3/animation_speed = 3.0
-0:3/animation_mode = 1
-0:3/animation_frame_0/duration = 1.0
-0:3/animation_frame_1/duration = 1.0
-0:3/animation_frame_2/duration = 1.0
-0:3/animation_frame_3/duration = 1.0
-0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.359716, 8, -0.179857, 8, 8, -8, 8)
-0:4/animation_speed = 3.0
-0:4/animation_frame_0/duration = 1.0
-0:4/animation_frame_1/duration = 1.0
-0:4/animation_frame_2/duration = 1.0
-0:4/animation_frame_3/duration = 1.0
-0:4/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wslke"]
-texture = ExtResource("3_2lpho")
-0:4/0 = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:4/0 = 0
-0:0/animation_columns = 4
-0:0/animation_speed = 4.0
-0:0/animation_frame_0/duration = 1.0
-0:0/animation_frame_1/duration = 1.0
-0:0/animation_frame_2/duration = 1.0
-0:0/animation_frame_3/duration = 1.0
-0:0/animation_frame_4/duration = 1.0
-0:0/animation_frame_5/duration = 1.0
-0:0/animation_frame_6/duration = 1.0
-0:0/animation_frame_7/duration = 1.0
-0:0/animation_frame_8/duration = 1.0
-0:0/animation_frame_9/duration = 1.0
-0:0/animation_frame_10/duration = 1.0
-0:0/animation_frame_11/duration = 1.0
-0:0/animation_frame_12/duration = 1.0
-0:0/animation_frame_13/duration = 1.0
-0:0/animation_frame_14/duration = 1.0
-0:0/animation_frame_15/duration = 1.0
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_gw3fx"]
-physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_mlgqr")
-sources/1 = SubResource("TileSetAtlasSource_wslke")
+[ext_resource type="TileSet" uid="uid://blohjbcue1bu" path="res://resources/overworld_ground.tres" id="1_paxxb"]
+[ext_resource type="TileSet" uid="uid://ddldhc7ogioag" path="res://resources/water.tres" id="2_gldc4"]
 
 [node name="Map" type="Node2D"]
 
 [node name="Ground" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD8/wQABAAAAAAAAAD9/wQABAABAAAAAAD+/wQABAABAAAAAAD//wQABAABAAAAAAAAAAQABAABAAAAAAABAAQABAABAAAAAAACAAQABAABAAAAAAADAAQABAABAAAAAAAEAAQABAABAAAAAAAFAAQABAABAAAAAAAGAAQABAABAAAAAAAHAAQABAABAAEAAAAIAAMABAABAAEAAAAIAAQABAABAAEAAAAIAAIABAAAAAEAAAAHAAMABAAAAAAAAAAIAAEABAAAAAAAAAAJAAEABAACAAAAAAAJAAIABAACAAEAAAAJAAMABAACAAEAAAAJAAQABAACAAEAAAD8/wUABAAAAAIAAAD9/wUABAABAAIAAAD+/wUABAABAAIAAAD//wUABAABAAIAAAAAAAUABAABAAIAAAABAAUABAABAAIAAAACAAUABAABAAIAAAADAAUABAABAAIAAAAEAAUABAABAAIAAAAFAAUABAABAAIAAAAGAAUABAABAAIAAAAHAAUABAABAAIAAAAIAAUABAABAAIAAAAJAAUABAABAAIAAAAKAAUABAABAAIAAAALAAUABAABAAIAAAAMAAUABAABAAIAAAANAAUABAABAAIAAAAOAAUABAABAAIAAAAPAAUABAABAAIAAAAQAAUABAABAAIAAAARAAUABAABAAIAAAASAAUABAABAAIAAAATAAUABAABAAIAAAAUAAUABAACAAIAAAAUAAQABAACAAEAAAAUAAMABAACAAEAAAAUAAIABAACAAAAAAATAAQABAABAAEAAAATAAMABAABAAEAAAATAAIABAABAAAAAAASAAIABAABAAAAAAARAAIABAABAAAAAAARAAMABAABAAEAAAARAAQABAABAAEAAAASAAQABAABAAEAAAASAAMABAABAAEAAAAPAAIABAAAAAAAAAAPAAMABAAAAAEAAAAPAAQABAAAAAEAAAAQAAIABAABAAAAAAAQAAMABAABAAEAAAAQAAQABAABAAEAAAAVAAMABAAAAAAAAAAWAAMABAABAAAAAAAXAAMABAACAAAAAAAYAAMABAAAAAAAAAAZAAMABAABAAAAAAAaAAMABAAAAAAAAAAbAAMABAABAAAAAAAcAAMABAACAAAAAAAdAAMABAAAAAAAAAAeAAMABAABAAAAAAAfAAMABAACAAAAAAAgAAMABAABAAAAAAAhAAMABAABAAAAAAAiAAMABAABAAAAAAAjAAMABAABAAAAAAAkAAMABAABAAAAAAAlAAMABAABAAAAAAAmAAMABAABAAAAAAAnAAMABAABAAAAAAAoAAMABAABAAAAAAAVAAQABAAAAAEAAAAVAAUABAAAAAIAAAAWAAQABAAAAAEAAAAWAAUABAAAAAIAAAAXAAQABAABAAEAAAAXAAUABAABAAIAAAAYAAQABAACAAEAAAAYAAUABAACAAIAAAAZAAQABAAAAAEAAAAZAAUABAAAAAIAAAAaAAQABAABAAEAAAAaAAUABAABAAIAAAAbAAQABAACAAEAAAAbAAUABAACAAIAAAAcAAQABAAAAAEAAAAcAAUABAAAAAIAAAAdAAQABAABAAEAAAAdAAUABAABAAIAAAAeAAQABAACAAEAAAAeAAUABAACAAIAAAAfAAQABAAAAAEAAAAfAAUABAAAAAIAAAAgAAQABAABAAEAAAAgAAUABAABAAIAAAAhAAQABAACAAEAAAAhAAUABAACAAIAAAAiAAQABAAAAAEAAAAiAAUABAAAAAIAAAAjAAQABAABAAEAAAAjAAUABAABAAIAAAAkAAQABAACAAEAAAAkAAUABAACAAIAAAAlAAQABAAAAAEAAAAlAAUABAAAAAIAAAAmAAQABAABAAEAAAAmAAUABAABAAIAAAAnAAQABAAAAAEAAAAnAAUABAAAAAIAAAAoAAQABAABAAEAAAAoAAUABAABAAIAAAApAAQABAACAAEAAAApAAUABAACAAIAAAA=")
-tile_set = SubResource("TileSet_blm8a")
+tile_set = ExtResource("1_paxxb")
 
 [node name="Water" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAKAAMAAQAAAAQAAAAKAAQAAQABAAQAAAALAAQAAQABAAQAAAAMAAQAAQABAAQAAAANAAQAAQABAAQAAAAOAAQAAQABAAQAAAALAAMAAQAAAAQAAAAMAAMAAQAAAAQAAAANAAMAAQAAAAQAAAAOAAMAAQAAAAQAAAAKAAIAAQAAAAAAAAALAAIAAQAAAAAAAAAMAAIAAQAAAAAAAAANAAIAAQAAAAAAAAAOAAIAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_gw3fx")
+tile_set = ExtResource("2_gldc4")
