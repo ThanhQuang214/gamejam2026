@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=11 format=4 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="PackedScene" uid="uid://bjsfrrk604b" path="res://scenes/map.tscn" id="2_l1v76"]
@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c57gf5ub41ijc" path="res://scenes/FunctionalObject/save_point.tscn" id="6_din8e"]
 [ext_resource type="TileSet" uid="uid://blohjbcue1bu" path="res://resources/overworld_ground.tres" id="7_4bh5q"]
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="8_e124b"]
-[ext_resource type="PackedScene" uid="uid://gl60rg34go2s" path="res://scenes/the_fool.tscn" id="9_101mb"]
-[ext_resource type="PackedScene" uid="uid://bc3lukjnv4te6" path="res://scenes/stone.tscn" id="10_hbo4f"]
+[ext_resource type="PackedScene" uid="uid://cwg7vdewduw55" path="res://scenes/the_fool.tscn" id="9_101mb"]
+[ext_resource type="PackedScene" path="res://scenes/stone.tscn" id="10_hbo4f"]
 
 [node name="Gameplay" type="Node2D"]
 y_sort_enabled = true
@@ -36,6 +36,8 @@ position = Vector2(-51, 9)
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_ocj2s")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(0, 4)
+tile_map_data = PackedByteArray("AAAUAAAABAABAAAAAAAVAAAABAABAAAAAAAWAAAABAABAAAAAAAXAAAABAABAAAAAAAYAAAABAABAAAAAAAZAAAABAABAAAAAAAaAAAABAABAAAAAAAbAAAABAABAAAAAAAcAAAABAABAAAAAAAdAAAABAABAAAAAAAeAAAABAABAAAAAAAfAAAABAABAAAAAAAgAAAABAABAAAAAAAhAAAABAABAAAAAAAiAAAABAABAAAAAAAjAAAABAABAAAAAAAkAAAABAABAAAAAAAlAAAABAABAAAAAAAmAAAABAABAAAAAAAnAAAABAABAAAAAAAnAAEABAABAAEAAAAoAAEABAABAAEAAAAoAAAABAAAAAEAAAAoAP//BAAAAAEAAAAoAP7/BAAAAAAAAAApAP7/BAABAAAAAAAqAP7/BAABAAAAAAAmAAEABAABAAIAAAApAAEABAABAAEAAAApAAAABAABAAEAAAApAP//BAABAAEAAAAqAP//BAACAAEAAAAqAAAABAACAAEAAAAqAAEABAACAAEAAAAqAAIABAACAAIAAAApAAIABAABAAIAAAAoAAIABAABAAIAAAAnAAIABAABAAIAAAAmAAIABAABAAIAAAAlAAEABAABAAIAAAAlAAIABAABAAIAAAAkAAIABAABAAIAAAA=")
 tile_set = ExtResource("7_4bh5q")
 
 [node name="Wind2" parent="." instance=ExtResource("8_e124b")]
