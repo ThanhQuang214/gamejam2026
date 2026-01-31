@@ -1,12 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://db3gunc8lhlbb"]
+[gd_scene load_steps=7 format=3 uid="uid://db3gunc8lhlbb"]
 
 [ext_resource type="PackedScene" uid="uid://baqt5rfmly5oc" path="res://scenes/player.tscn" id="1_7biu0"]
 [ext_resource type="PackedScene" uid="uid://bjsfrrk604b" path="res://scenes/map.tscn" id="2_l1v76"]
 [ext_resource type="PackedScene" uid="uid://c1b255ekerdrw" path="res://scenes/ui_center.tscn" id="4_ct7aa"]
-[ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="4_ocj2s"]
+[ext_resource type="PackedScene" path="res://scenes/parallax_background.tscn" id="4_ocj2s"]
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="5_din8e"]
 [ext_resource type="PackedScene" uid="uid://c57gf5ub41ijc" path="res://scenes/FunctionalObject/save_point.tscn" id="6_din8e"]
-[ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="4_ocj2s"]
 
 [node name="Gameplay" type="Node2D"]
 y_sort_enabled = true
@@ -19,15 +18,15 @@ position = Vector2(-16, -43)
 [node name="UICenter" parent="." instance=ExtResource("4_ct7aa")]
 
 [node name="Wind" parent="." instance=ExtResource("4_ocj2s")]
-position = Vector2(144, 5)
 
 [node name="DrownArea" parent="." instance=ExtResource("5_din8e")]
-position = Vector2(200, 74)
+position = Vector2(184, 30)
 scale = Vector2(4, 0.5)
 
 [node name="SavePoint" parent="." instance=ExtResource("6_din8e")]
-position = Vector2(57, 52)
+position = Vector2(67, 10)
 
 [node name="SavePoint2" parent="." instance=ExtResource("6_din8e")]
-position = Vector2(-53, 51)
+position = Vector2(-51, 9)
+
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_ocj2s")]
