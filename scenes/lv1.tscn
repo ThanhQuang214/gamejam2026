@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dbgh4l88dfyqy"]
+[gd_scene load_steps=11 format=4 uid="uid://dbgh4l88dfyqy"]
 
 [ext_resource type="PackedScene" uid="uid://snc8n8w2ocvk" path="res://scenes/FunctionalObject/drown_area.tscn" id="1_4pb43"]
 [ext_resource type="PackedScene" uid="uid://clvbsy5wvyomd" path="res://scenes/FunctionalObject/cross_bow.tscn" id="1_w343t"]
@@ -10,8 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b37l8qojpnw25" path="res://scenes/FunctionalObject/wind.tscn" id="7_jktqh"]
 [ext_resource type="PackedScene" uid="uid://b3ajpu8xe7lfc" path="res://scenes/FunctionalObject/pulse.tscn" id="7_x6hvx"]
 [ext_resource type="AudioStream" uid="uid://dr273odoucuib" path="res://Sound/Piano music.mp3" id="9_ytfl3"]
-[ext_resource type="AudioStream" uid="uid://di5kl3tk0ihoh" path="res://Sound/footstep.mp3" id="11_cu3pm"]
-[ext_resource type="PackedScene" uid="uid://3sjybv26oqsg" path="res://scenes/parallax_background.tscn" id="11_cu3pm"]
 
 [node name="Lv1" type="Node2D"]
 
@@ -119,5 +117,3 @@ attenuation = 0.138696
 parameters/looping = true
 
 [node name="FootStep" type="AudioStreamPlayer2D" parent="Audio"]
-stream = ExtResource("11_cu3pm")
-parameters/looping = true
