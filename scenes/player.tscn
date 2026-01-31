@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cvo2fn1jcjrki" path="res://script/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://xmqe8g0s1s3u" path="res://asset/player/aura.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bqlgdrrn0g5yv" path="res://asset/player/dead_effect.png" id="3_dqkch"]
+[ext_resource type="AudioStream" uid="uid://74rwlbgy2dbp" path="res://Sound/UhuhDie.mp3" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hax0n"]
 atlas = ExtResource("2_qhqgy")
@@ -403,3 +404,4 @@ shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
