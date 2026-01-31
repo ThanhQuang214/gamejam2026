@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 200
+const SPEED = 150
 const JUMP_VELOCITY = -250
 var mask: int = 0
 
