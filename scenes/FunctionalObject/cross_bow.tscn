@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://clvbsy5wvyomd"]
+[gd_scene load_steps=4 format=3 uid="uid://clvbsy5wvyomd"]
 
 [ext_resource type="Script" uid="uid://28qcu3nb4ple" path="res://script/cross_bow.gd" id="1_s2w6f"]
 [ext_resource type="Texture2D" uid="uid://bscmn18oa3y6s" path="res://asset/map/cross_bow.png" id="1_t7k68"]
 [ext_resource type="PackedScene" uid="uid://djk346it5h3io" path="res://scenes/FunctionalObject/arrow.tscn" id="2_vw0lr"]
-[ext_resource type="AudioStream" uid="uid://0y7g2vfids7o" path="res://Sound/arrow-sound.mp3" id="4_t6174"]
 
 [node name="CrossBow" type="Node2D" node_paths=PackedStringArray("shoot_point")]
 script = ExtResource("1_s2w6f")
@@ -15,8 +14,3 @@ texture = ExtResource("1_t7k68")
 
 [node name="ShootingPoint" type="Node2D" parent="."]
 position = Vector2(-2, -2)
-
-[node name="ShootingSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_t6174")
-volume_db = 15.0
-max_distance = 400.0
