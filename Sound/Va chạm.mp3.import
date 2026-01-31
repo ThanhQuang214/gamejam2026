@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bw2df0302v71h"
+path="res://.godot/imported/Va chạm.mp3-d65018cb1115b0ccac057a7ad134a041.mp3str"
+
+[deps]
+
+source_file="res://Sound/Va chạm.mp3"
+dest_files=["res://.godot/imported/Va chạm.mp3-d65018cb1115b0ccac057a7ad134a041.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
